@@ -16,12 +16,14 @@ function isEven($num)
 
 function playEvenGame()
 {
+    line("./bin/brain-games");
+    line("Welcome to the Brain Game!");
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     print_r("Answer \"yes\" if the number is even, otherwise answer \"no\".\n");
     $answers = [];
     while (count($answers) < 3) {
-        $num = rand();
+        $num = rand(0, 100);
         $value = isEven($num);
         print_r("Question: $num\n");
         $answer = prompt('Your answer');
@@ -34,7 +36,7 @@ function playEvenGame()
             break;
         }
     }
-    if (count($answers) === 3) {
+    if (count($answers)  === 3) {
         print_r("Congratulations, $name!\n");
     }
 }
