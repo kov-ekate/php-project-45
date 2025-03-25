@@ -20,7 +20,7 @@ function generateRoundData()
 
 function playGcdGame()
 {
-    $description = "Find the greatest common divisor of given numbers.\n";
+    $description = "Find the greatest common divisor of given numbers.";
     runGame(function () {
         return generateRoundData();
     }, $description);

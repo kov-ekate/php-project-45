@@ -8,3 +8,6 @@
 [![asciinema](https://asciinema.org/a/wEbbJzNv1gyDeCHk1FUwaOrVt.svg)](https://asciinema.org/a/wEbbJzNv1gyDeCHk1FUwaOrVt)
 ## Gcd
 [![asciinema](https://asciinema.org/a/01ClsF04CZe7oMVdC8rpUWE9y.svg)](https://asciinema.org/a/01ClsF04CZe7oMVdC8rpUWE9y)
+## Progression
+[![asciinema](https://asciinema.org/a/Ogxn0Oa03SgXfvcZgZw4lE2pC.svg)](https://asciinema.org/a/Ogxn0Oa03SgXfvcZgZw4lE2pC)
+

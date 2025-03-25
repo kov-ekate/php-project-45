@@ -27,7 +27,7 @@ function generateRoundData()
 
 function playEvenGame()
 {
-    $description = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
+    $description = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
     runGame(function () {
         return generateRoundData();
     }, $description);

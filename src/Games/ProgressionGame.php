@@ -1,0 +1,36 @@
+<?php
+
+namespace BrainGames\Games\ProgressionGame;
+
+use function cli\line;
+use function cli\prompt;
+use function BrainGames\Engine\runGame;
+
+function generateRoundData()
+{
+    $coll = [];
+    $start = rand(0, 20);
+    $step = rand(0, 10);
+    $index = 0;
+    $progression = [];
+    $progression[] = $start;
+    while ($index < 10) {
+        $progression[] = $progression[$index] + $step;
+        $index++;
+    }
+    $pass = array_rand($progression);
+    $correctAnswer = "$progression[$pass]";
+    $progression[$pass] = '..';
+    $question = implode(' ', $progression);
+    $coll[] = $question;
+    $coll[] = $correctAnswer;
+    return $coll;
+}
+
+function playProgressionGame()
+{
+    $description = "What number is missing in the progression?";
+    runGame(function () {
+        return generateRoundData();
+    }, $description);
+}

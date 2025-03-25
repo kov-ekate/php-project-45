@@ -15,18 +15,18 @@ function runGame(callable $generateRoundData, string $description): void
     $answers = [];
     while (count($answers) < 3) {
         $roundData = $generateRoundData();
-        print_r("Question: $roundData[0]\n");
+        line("Question: $roundData[0]");
         $answer = prompt('Your answer');
         if ($answer == $roundData[1]) {
-            print_r("Correct!\n");
+            line("Correct!");
             $answers[] = $answer;
         } else {
-            print_r("'$answer' is wrong answer ;(. Correct answer was '$roundData[1]'\n");
-            print_r("Let's try again, $name\n");
+            line("'$answer' is wrong answer ;(. Correct answer was '$roundData[1]'");
+            line("Let's try again, $name");
             break;
         }
     }
     if (count($answers) === 3) {
-        print_r("Congratulations, $name!\n");
+        line("Congratulations, $name!");
     }
 }
