@@ -6,5 +6,5 @@ require __DIR__ . '/../vendor/autoload.php';
 use function BrainGames\Cli\greeting;
 use function cli\line;
 line("./bin/brain-games");
-line("Welcome to the Brain Game!");
+line("Welcome to the Brain Games!");
 greeting();
