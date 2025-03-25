@@ -22,7 +22,7 @@ function runGame(callable $generateRoundData, string $description): void
             $answers[] = $answer;
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$roundData[1]'");
-            line("Let's try again, $name");
+            line("Let's try again, $name!");
             break;
         }
     }
