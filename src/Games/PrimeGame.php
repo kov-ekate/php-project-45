@@ -8,10 +8,20 @@ use function BrainGames\Engine\runGame;
 
 function isPrime($num)
 {
-    if (gmp_prob_prime($num) == 0) { 
-        return 'no';
-    } elseif (gmp_prob_prime($num) == 2) {
+    $index = 1;
+    $coll = [];
+
+    while ($index <= $num) {
+        if ($num % $index === 0) {
+            $coll[] = $index;
+        }
+        $index++;
+    }
+
+    if (count($coll) === 2) {
         return 'yes';
+    } else {
+        return 'no';
     }
 }
 
