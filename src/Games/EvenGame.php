@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
-function isEven($num)
+function isEven(int $num)
 {
     if ($num % 2 === 0) {
         return 'yes';

@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
-function gcd($num1, $num2)
+function gcd(int $num1, int $num2)
 {
     while ($num2 != 0) {
         $temp = $num2;

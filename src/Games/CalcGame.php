@@ -21,7 +21,7 @@ function generateRandExpression()
     return $roudData;
 }
 
-function calculateExpression($num1, $num2, $operator)
+function calculateExpression(int $num1, int $num2, mixed $operator)
 {
     switch ($operator) {
         case '+':
