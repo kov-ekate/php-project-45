@@ -13,7 +13,7 @@ function generateRandExpression()
     $randOperator = $operators[$randKey];
     $num1 = rand(0, 100);
     $num2 = rand(0, 100);
-    $randExpression = "$num1 $randOperator $num2;";
+    $randExpression = "$num1 $randOperator $num2";
     return $randExpression;
 }
 function generateRoundData()
