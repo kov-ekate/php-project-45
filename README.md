@@ -23,26 +23,33 @@ Brain Games - набор из пяти консольных игр на пров
 
 ## Установка
 1. Клонируйте репозиторий:
+
 ```bash
-    git clone git@github.com:kov-ekate/php-project-45.git
-    ```
+git clone git@github.com:kov-ekate/php-project-45.git
+```
+    
 2. Перейдите в директорию проекта:
+
  ```bash
-    cd brain-games
-    ```
+cd brain-games
+```
+    
 3. Установите зависимости:
+
 ```bash
-    make install
-    ```
+make install
+```
 
 ## Запуск
+
  ```bash
-    make brain-even  # Для игры "Проверка на чётность"
-    make brain-calc  # Для игры "Калькулятор"
-    make brain-gcd  # Для игры "НОД"
-    make brain-progression  # Для игры "Арифметическая прогрессия"
-    make brain-prime  #  Для игры "Простое ли число?"
-    ```
+make brain-even  # Для игры "Проверка на чётность"
+make brain-calc  # Для игры "Калькулятор"
+make brain-gcd  # Для игры "НОД"
+make brain-progression  # Для игры "Арифметическая прогрессия"
+make brain-prime  #  Для игры "Простое ли число?"
+```
+
 ## Демонстрация работы
 # Проверка на чётность
 [![asciinema](https://asciinema.org/a/jtx0KVZRMgSOI6xpD8TpP4jQF.svg)](https://asciinema.org/a/jtx0KVZRMgSOI6xpD8TpP4jQF)
