@@ -16,7 +16,7 @@ function runGame(callable $generateRoundData, string $description): void
     while (count($answers) < 3) {
         $roundData = $generateRoundData();
         $quest = "Question: $roundData[0]";
-        line($quest);
+        print_r("$quest\n");
         $answer = prompt('Your answer');
         if ($answer == $roundData[1]) {
             line("Correct!");
