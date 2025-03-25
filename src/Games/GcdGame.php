@@ -12,7 +12,7 @@ function generateRoundData()
     $num1 = rand(0, 100);
     $num2 = rand(0, 100);
     $correctAnswer = gmp_gcd($num1, $num2);
-    $question = "$num1 $num2";
+    $question = "{$num1} {$num2}";
     $coll[] = $question;
     $coll[] = $correctAnswer;
     return $coll;
