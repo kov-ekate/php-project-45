@@ -25,7 +25,7 @@ function generateRoundData()
     $question = "{$num1} {$num2}";
     $coll[] = $question;
     $coll[] = $correctAnswer;
-    
+
     return $coll;
 }
 

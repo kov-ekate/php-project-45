@@ -43,7 +43,7 @@ function generateRoundData()
     $correctAnswer = $data[1];
     $coll[] = $question;
     $coll[] = $correctAnswer;
-    
+
     return $coll;
 }
 

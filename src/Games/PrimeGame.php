@@ -30,7 +30,7 @@ function generateRoundData()
     $correctAnswer = isPrime($question);
     $coll[] = $question;
     $coll[] = $correctAnswer;
-    
+
     return $coll;
 }
 

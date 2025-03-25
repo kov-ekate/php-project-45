@@ -27,7 +27,7 @@ function runGame(callable $generateRoundData, string $description): void
             break;
         }
     }
-    
+
     if (count($answers) === 3) {
         line("Congratulations, $name!");
     }

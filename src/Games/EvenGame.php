@@ -20,7 +20,7 @@ function generateRoundData()
     $correctAnswer = isEven($question);
     $coll[] = $question;
     $coll[] = $correctAnswer;
-    
+
     return $coll;
 }
 
