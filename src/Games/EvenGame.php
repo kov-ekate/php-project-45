@@ -8,7 +8,7 @@ use function BrainGames\Engine\runGame;
 
 function isEven($num)
 {
-    if ($num % 2 === 0) {
+    if ($num % 2 === 0) { 
         return 'yes';
     } else {
         return 'no';
