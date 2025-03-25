@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\ProgressionGame;
 
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
 function generateRoundData()
@@ -14,16 +12,20 @@ function generateRoundData()
     $index = 0;
     $progression = [];
     $progression[] = $start;
+
     while ($index < 10) {
         $progression[] = $progression[$index] + $step;
         $index++;
     }
+
     $pass = array_rand($progression);
     $correctAnswer = "$progression[$pass]";
     $progression[$pass] = '..';
     $question = implode(' ', $progression);
+
     $coll[] = $question;
     $coll[] = $correctAnswer;
+    
     return $coll;
 }
 

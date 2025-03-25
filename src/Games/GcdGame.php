@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\GcdGame;
 
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
 function gcd(int $num1, int $num2)
@@ -13,6 +11,7 @@ function gcd(int $num1, int $num2)
         $num2 = $num1 % $num2;
         $num1 = $temp;
     }
+
     return $num1;
 }
 
@@ -26,6 +25,7 @@ function generateRoundData()
     $question = "{$num1} {$num2}";
     $coll[] = $question;
     $coll[] = $correctAnswer;
+    
     return $coll;
 }
 

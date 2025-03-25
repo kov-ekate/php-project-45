@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\EvenGame;
 
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
 function isEven(int $num)
@@ -22,6 +20,7 @@ function generateRoundData()
     $correctAnswer = isEven($question);
     $coll[] = $question;
     $coll[] = $correctAnswer;
+    
     return $coll;
 }
 

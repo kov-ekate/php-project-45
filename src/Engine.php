@@ -13,6 +13,7 @@ function runGame(callable $generateRoundData, string $description): void
     line("Hello, %s!", $name);
     line($description);
     $answers = [];
+
     while (count($answers) < 3) {
         $roundData = $generateRoundData();
         line("Question: %s", $roundData[0]);
@@ -26,6 +27,7 @@ function runGame(callable $generateRoundData, string $description): void
             break;
         }
     }
+    
     if (count($answers) === 3) {
         line("Congratulations, $name!");
     }

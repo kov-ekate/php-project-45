@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\PrimeGame;
 
-use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\runGame;
 
 function isPrime(int $num)
@@ -32,6 +30,7 @@ function generateRoundData()
     $correctAnswer = isPrime($question);
     $coll[] = $question;
     $coll[] = $correctAnswer;
+    
     return $coll;
 }
 
