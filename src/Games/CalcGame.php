@@ -10,17 +10,35 @@ function generateRandExpression()
 {
     $operators = ['+', '-', '*'];
     $randKey = array_rand($operators);
-    $randOperator = $operators[$randKey];
+    $operator = $operators[$randKey];
     $num1 = rand(0, 100);
     $num2 = rand(0, 100);
-    $randExpression = "$num1 $randOperator $num2";
-    return $randExpression;
+    $randExpression = "$num1 $operator $num2";
+    $correctAnswer = calculateExpression($num1, $num2, $operator);
+    $roudData = [];
+    $roudData[] = $randExpression;
+    $roudData[] = $correctAnswer;
+    return $roudData;
 }
+
+function calculateExpression($num1, $num2, $operator)
+{
+    switch ($operator) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+    }
+}
+
 function generateRoundData()
 {
     $coll = [];
-    $question = generateRandExpression();
-    $correctAnswer = eval("return " . $question . ";");
+    $data = generateRandExpression();
+    $question = $data[0];
+    $correctAnswer = $data[1];
     $coll[] = $question;
     $coll[] = $correctAnswer;
     return $coll;
