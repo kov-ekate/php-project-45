@@ -30,6 +30,7 @@ function playProgressionGame()
         $progression[$pass] = '..';
         $question = implode(' ', $progression);
 
+        $roundData = [];
         $roundData[] = $question;
         $roundData[] = $correctAnswer;
 

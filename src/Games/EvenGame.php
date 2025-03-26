@@ -16,6 +16,7 @@ function playEvenGame()
         $question = rand(0, 1000);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
 
+        $roundData = [];
         $roundData[] = $question;
         $roundData[] = $correctAnswer;
 

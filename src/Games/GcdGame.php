@@ -15,24 +15,21 @@ function gcd(int $num1, int $num2)
     return $num1;
 }
 
-
-function generateRoundData()
-{
-    $coll = [];
-    $num1 = rand(0, 100);
-    $num2 = rand(0, 100);
-    $correctAnswer = gcd($num1, $num2);
-    $question = "{$num1} {$num2}";
-    $coll[] = $question;
-    $coll[] = $correctAnswer;
-
-    return $coll;
-}
-
 function playGcdGame()
 {
     $description = "Find the greatest common divisor of given numbers.";
-    runGame(function () {
-        return generateRoundData();
-    }, $description);
+    $gameData = function () {
+        $roundData = [];
+        $num1 = rand(0, 100);
+        $num2 = rand(0, 100);
+        $correctAnswer = gcd($num1, $num2);
+        $question = "{$num1} {$num2}";
+
+        $roundData[] = $question;
+        $roundData[] = $correctAnswer;
+
+        return $roundData;
+    }
+
+    runGame($gameData, $description);
 }
