@@ -31,7 +31,7 @@ function playPrimeGame()
         $roundData[] = $correctAnswer;
     
         return $roundData;
-    }
+    };
 
     runGame($gameData, $description);
 }
