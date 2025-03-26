@@ -28,7 +28,7 @@ function playPrimeGame()
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
         $roundData[] = $question;
         $roundData[] = $correctAnswer;
-    
+
         return $roundData;
     };
 
