@@ -5,16 +5,23 @@
 
 ## Описание проекта
 Brain Games - набор из пяти консольных игр на проверку внимательности и арифметических навыков.
-### "Проверка на чётность"
-Игра, в которой нужно определить, является ли заданное число чётным. 
-### "Калькулятор"
+
+## Демонстрация работы
+# Проверка на чётность
+Игра, в которой нужно определить, является ли заданное число чётным.
+https://asciinema.org/a/jtx0KVZRMgSOI6xpD8TpP4jQF
+## Калькулятор
 Игра, в которой предстоит решить несложные математические выражения.
-### "НОД"
+https://asciinema.org/a/wEbbJzNv1gyDeCHk1FUwaOrVt
+## НОД
 Игра, в которой необходимо определить наибольший общий делитель для двух чисел.
-### "Арифметическая прогрессия"
+https://asciinema.org/a/01ClsF04CZe7oMVdC8rpUWE9y
+## Арифметическая прогрессия
 Игра, в которой следует заполнить пропуск в арифметической прогрессии.
-### "Простое ли число?"
+https://asciinema.org/a/Ogxn0Oa03SgXfvcZgZw4lE2pC
+## Простое ли число?
 Игра, в которой нужно определить, является ли число простым.
+https://asciinema.org/a/RSAXWGAzktmwLBeaPwr6vzEUx
 
 ## Минимальные требования
 * PHP 7.4 или выше
@@ -49,16 +56,3 @@ make brain-gcd  # Для игры "НОД"
 make brain-progression  # Для игры "Арифметическая прогрессия"
 make brain-prime  #  Для игры "Простое ли число?"
 ```
-
-## Демонстрация работы
-# Проверка на чётность
-[![asciinema](https://asciinema.org/a/jtx0KVZRMgSOI6xpD8TpP4jQF.svg)](https://asciinema.org/a/jtx0KVZRMgSOI6xpD8TpP4jQF)
-## Калькулятор
-[![asciinema](https://asciinema.org/a/wEbbJzNv1gyDeCHk1FUwaOrVt.svg)](https://asciinema.org/a/wEbbJzNv1gyDeCHk1FUwaOrVt)
-## НОД
-[![asciinema](https://asciinema.org/a/01ClsF04CZe7oMVdC8rpUWE9y.svg)](https://asciinema.org/a/01ClsF04CZe7oMVdC8rpUWE9y)
-## Арифметическая прогрессия
-[![asciinema](https://asciinema.org/a/Ogxn0Oa03SgXfvcZgZw4lE2pC.svg)](https://asciinema.org/a/Ogxn0Oa03SgXfvcZgZw4lE2pC)
-## Простое ли число?
-[![asciinema](https://asciinema.org/a/RSAXWGAzktmwLBeaPwr6vzEUx.svg)](https://asciinema.org/a/RSAXWGAzktmwLBeaPwr6vzEUx)
-
