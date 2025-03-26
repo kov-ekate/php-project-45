@@ -16,11 +16,11 @@ function generateRandExpression()
     $randExpression = "$num1 $operator $num2";
     $correctAnswer = calculateExpression($num1, $num2, $operator);
 
-    $roudData = [];
-    $roudData[] = $randExpression;
-    $roudData[] = $correctAnswer;
+    $randData = [];
+    $randData[] = $randExpression;
+    $randData[] = $correctAnswer;
 
-    return $roudData;
+    return $randData;
 }
 
 function calculateExpression(int $num1, int $num2, mixed $operator)
@@ -32,19 +32,21 @@ function calculateExpression(int $num1, int $num2, mixed $operator)
             return $num1 - $num2;
         case '*':
             return $num1 * $num2;
+        default:
+            return null;
     }
 }
 
 function generateRoundData()
 {
-    $coll = [];
+    $roundData = [];
     $data = generateRandExpression();
     $question = $data[0];
     $correctAnswer = $data[1];
-    $coll[] = $question;
-    $coll[] = $correctAnswer;
+    $roundData[] = $question;
+    $roundData[] = $correctAnswer;
 
-    return $coll;
+    return $roundData;
 }
 
 function playCalcGame()
