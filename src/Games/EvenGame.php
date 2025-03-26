@@ -7,7 +7,6 @@ use function BrainGames\Engine\runGame;
 function isEven(int $num)
 {
     return $num % 2 === 0;
-        
 }
 
 function playEvenGame()

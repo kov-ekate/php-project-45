@@ -52,7 +52,15 @@ function generateRoundData()
 function playCalcGame()
 {
     $description = "What is the result of the expression?";
-    runGame(function () {
-        return generateRoundData();
-    }, $description);
+    $gameData = function () {
+        $roundData = [];
+        $data = generateRandExpression();
+        $question = $data[0];
+        $correctAnswer = $data[1];
+        $roundData[] = $question;
+        $roundData[] = $correctAnswer;
+
+        return $roundData;
+    };
+    runGame($gameData, $description);
 }
