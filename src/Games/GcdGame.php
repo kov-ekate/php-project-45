@@ -29,7 +29,7 @@ function playGcdGame()
         $roundData[] = $correctAnswer;
 
         return $roundData;
-    }
+    };
 
     runGame($gameData, $description);
 }
