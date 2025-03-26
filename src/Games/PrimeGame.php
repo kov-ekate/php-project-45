@@ -17,7 +17,6 @@ function isPrime(int $num)
     }
 
     return count($coll) === 2;
-       
 }
 
 function playPrimeGame()
