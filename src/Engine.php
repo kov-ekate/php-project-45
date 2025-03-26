@@ -27,5 +27,4 @@ function runGame(callable $generateRoundData, string $description): void
     }
 
     line("Congratulations, $name!");
-
 }
