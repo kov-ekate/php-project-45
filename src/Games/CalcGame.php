@@ -35,19 +35,6 @@ function calculateExpression(int $num1, int $num2, mixed $operator)
         default:
             return null;
     }
-}
-
-function generateRoundData()
-{
-    $roundData = [];
-    $data = generateRandExpression();
-    $question = $data[0];
-    $correctAnswer = $data[1];
-    $roundData[] = $question;
-    $roundData[] = $correctAnswer;
-
-    return $roundData;
-}
 
 function playCalcGame()
 {

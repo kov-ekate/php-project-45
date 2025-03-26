@@ -16,28 +16,22 @@ function isPrime(int $num)
         $index++;
     }
 
-    if (count($coll) === 2) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
-}
-
-function generateRoundData()
-{
-    $coll = [];
-    $question = rand(0, 50);
-    $correctAnswer = isPrime($question);
-    $coll[] = $question;
-    $coll[] = $correctAnswer;
-
-    return $coll;
+    return count($coll) === 2;
+       
 }
 
 function playPrimeGame()
 {
     $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
-    runGame(function () {
-        return generateRoundData();
-    }, $description);
+    $gameData = function () {
+        $coll = [];
+        $question = rand(0, 50);
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
+        $roundData[] = $question;
+        $roundData[] = $correctAnswer;
+    
+        return $roundData;
+    }
+
+    runGame($gameData, $description);
 }
