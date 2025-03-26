@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function runGame(callable $generateRoundData, string $description): void
+function runGame(callable $gameData, string $description): void
 {
     line("Welcome to the Brain Game!");
     $name = prompt('May I have your name?');
@@ -14,7 +14,7 @@ function runGame(callable $generateRoundData, string $description): void
     $numCorrectAnswers = 3;
 
     for ($i = 0; $i < $numCorrectAnswers; $i++) {
-        $roundData = $generateRoundData();
+        $roundData = $gameData();
         line("Question: %s", $roundData[0]);
         $answer = prompt('Your answer');
         $correctAnswer = $roundData[1];

@@ -6,28 +6,36 @@ use function BrainGames\Engine\runGame;
 
 function isEven(int $num)
 {
-    if ($num % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+    return $num % 2 === 0;
+        
 }
 
 function generateRoundData()
 {
-    $coll = [];
     $question = rand(0, 1000);
-    $correctAnswer = isEven($question);
-    $coll[] = $question;
-    $coll[] = $correctAnswer;
+    if (isEven($question) === true) {
+        $correctAnswer = 'yes';
+    } else {
+        $correctAnswer = 'no';
+    }
 
-    return $coll;
+    $roundData[] = $question;
+    $roundData[] = $correctAnswer;
+
+    return $roundData;
 }
 
 function playEvenGame()
 {
     $description = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
-    runGame(function () {
-        return generateRoundData();
-    }, $description);
+    $gameData = function () {
+        $question = rand(0, 1000);
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
+
+        $roundData[] = $question;
+        $roundData[] = $correctAnswer;
+
+        return $roundData;
+    };
+    runGame($gameData, $description);
 }
