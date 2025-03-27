@@ -4,7 +4,6 @@ namespace BrainGames\Games\CalcGame;
 
 use function BrainGames\Engine\runGame;
 
-
 function calculateExpression(int $num1, int $num2, mixed $operator)
 {
     switch ($operator) {
