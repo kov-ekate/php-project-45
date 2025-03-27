@@ -22,7 +22,7 @@ function isPrime(int $num)
 function playPrimeGame()
 {
     $description = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
-    $gameData = function () {
+    $generateGameData = function () {
         $roundData = [];
         $question = rand(0, 50);
         $correctAnswer = isPrime($question) ? 'yes' : 'no';
@@ -32,5 +32,5 @@ function playPrimeGame()
         return $roundData;
     };
 
-    runGame($gameData, $description);
+    runGame($generateGameData, $description);
 }

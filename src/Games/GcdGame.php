@@ -18,7 +18,7 @@ function gcd(int $num1, int $num2)
 function playGcdGame()
 {
     $description = "Find the greatest common divisor of given numbers.";
-    $gameData = function () {
+    $generateGameData = function () {
         $roundData = [];
         $num1 = rand(0, 100);
         $num2 = rand(0, 100);
@@ -31,5 +31,5 @@ function playGcdGame()
         return $roundData;
     };
 
-    runGame($gameData, $description);
+    runGame($generateGameData, $description);
 }

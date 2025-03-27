@@ -23,7 +23,7 @@ function generateRandProgression()
 function playProgressionGame()
 {
     $description = "What number is missing in the progression?";
-    $gameData = function () {
+    $generateGameData = function () {
         $progression = generateRandProgression();
         $pass = array_rand($progression);
         $correctAnswer = "$progression[$pass]";
@@ -36,5 +36,5 @@ function playProgressionGame()
 
         return $roundData;
     };
-    runGame($gameData, $description);
+    runGame($generateGameData, $description);
 }

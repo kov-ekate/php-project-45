@@ -12,7 +12,7 @@ function isEven(int $num)
 function playEvenGame()
 {
     $description = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
-    $gameData = function () {
+    $generateGameData = function () {
         $question = rand(0, 1000);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
 
@@ -22,5 +22,5 @@ function playEvenGame()
 
         return $roundData;
     };
-    runGame($gameData, $description);
+    runGame($generateGameData, $description);
 }
