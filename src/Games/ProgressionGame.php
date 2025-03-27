@@ -4,18 +4,13 @@ namespace BrainGames\Games\ProgressionGame;
 
 use function BrainGames\Engine\runGame;
 
-function generateRandProgression()
+function generateRandProgression(int $start, int $step, int $elementsInProgressionCount)
 {
-    $coll = [];
-    $start = rand(0, 20);
-    $step = rand(0, 10);
-    $index = 0;
     $progression = [];
     $progression[] = $start;
 
-    while ($index < 10) {
-        $progression[] = $progression[$index] + $step;
-        $index++;
+    for ($i = 0; $i < $elementsInProgressionCount; $i++) {
+        $progression[] = $progression[$i] + $step;
     }
     return $progression;
 }
@@ -24,10 +19,13 @@ function playProgressionGame()
 {
     $description = "What number is missing in the progression?";
     $generateGameData = function () {
-        $progression = generateRandProgression();
-        $pass = array_rand($progression);
-        $correctAnswer = "$progression[$pass]";
-        $progression[$pass] = '..';
+        $start = rand(0, 20);
+        $step = rand(0, 10);
+        $elementsInProgressionCount = 10;
+        $progression = generateRandProgression($start, $step, $elementsInProgressionCount);
+        $missingNumber = array_rand($progression);
+        $correctAnswer = "$progression[$missingNumber]";
+        $progression[$missingNumber] = '..';
         $question = implode(' ', $progression);
 
         $roundData = [];
