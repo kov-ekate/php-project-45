@@ -11,19 +11,19 @@ function runGame(callable $gameData, string $description): void
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    $numCorrectAnswers = 3;
+    $correctAnswersCount = 3;
 
-    for ($i = 0; $i < $numCorrectAnswers; $i++) {
+    for ($i = 0; $i < $correctAnswersCount; $i++) {
         $roundData = $gameData();
-        line("Question: %s", $roundData[0]);
-        $answer = prompt('Your answer');
+        $question = $roundData[0];
         $correctAnswer = $roundData[1];
-        if ($answer == $correctAnswer) {
-            line("Correct!");
-        } else {
+        line("Question: %s", $question);
+        $answer = prompt('Your answer');
+        if ($answer != $correctAnswer) {
             line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'\nLet's try again, $name!");
             return;
         }
+        line("Correct!");
     }
 
     line("Congratulations, $name!");
