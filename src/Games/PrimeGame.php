@@ -6,17 +6,21 @@ use function BrainGames\Engine\runGame;
 
 function isPrime(int $num)
 {
-    $index = 1;
+    $index = 2;
     $coll = [];
 
-    while ($index <= $num) {
+    if ($num <= 1) {
+        return false;
+    }
+
+    while ($index < $num) {
         if ($num % $index === 0) {
-            $coll[] = $index;
+            return false;
         }
         $index++;
     }
 
-    return count($coll) === 2;
+    return true;
 }
 
 function playPrimeGame()
