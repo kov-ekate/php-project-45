@@ -4,7 +4,7 @@ namespace BrainGames\Games\ProgressionGame;
 
 use function BrainGames\Engine\runGame;
 
-function generateRandProgression(int $start, int $step, int $elementsInProgressionCount)
+function generateProgression(int $start, int $step, int $elementsInProgressionCount)
 {
     $progression = [];
     $progression[] = $start;
@@ -21,11 +21,11 @@ function playProgressionGame()
     $generateGameData = function () {
         $start = rand(0, 20);
         $step = rand(0, 10);
-        $elementsInProgressionCount = 10;
-        $progression = generateRandProgression($start, $step, $elementsInProgressionCount);
-        $missingNumber = array_rand($progression);
-        $correctAnswer = "$progression[$missingNumber]";
-        $progression[$missingNumber] = '..';
+        $progressionLenght = 10;
+        $progression = generateProgression($start, $step, $progressionLenght);
+        $missingNumberIndex = array_rand($progression);
+        $correctAnswer = "$progression[$missingNumberIndex]";
+        $progression[$missingNumberIndex] = '..';
         $question = implode(' ', $progression);
 
         $roundData = [];
